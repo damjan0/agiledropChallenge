@@ -1,0 +1,64 @@
+/*set up the section*/
+#challenge-about-me{
+  padding: 245px $paddingLR 180px;
+  background-color: $black;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include responsive($md){
+    flex-direction: column;
+  }
+}
+
+/*left part - text*/
+.content-left{
+  @include responsive($md){
+    width: 100%;
+  }
+  width: 42%;
+  h2{
+    margin: 0 0px 82px;
+    @include heading2();
+  }
+  p{
+    @include textFont();
+  }
+}
+
+/*right part - img*/
+.img-right{
+  @include responsive($md){
+    width: 100%;
+  }
+  width: 40%;
+  img{
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    position: relative;
+  }
+  &::before{  //blue square
+    content: "";
+    position: absolute;
+    width:330px;
+    height:330px;
+    background: #0F2123; //color not set in figma
+    transform: translate(-165px, -126px);
+    @include responsive($md){
+      display: none;
+    }
+  }
+  &::after{ //purple square
+    content: "";
+    position: absolute;
+    right: 0;
+    width:150px;
+    height:150px;
+    background: #1D1524; //color not set in figma
+    transform: translate(-200px, -75px) rotate(-45deg);
+    @include responsive($md){
+      display: none;
+    }
+
+  }
+}

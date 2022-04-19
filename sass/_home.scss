@@ -1,0 +1,56 @@
+/*set up the section*/
+#block-top-content-header{
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+  }
+  >* {
+		z-index: 100;
+	}
+}
+
+#challenge-home{
+  /*background*/
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*"musictheme"*/
+  h1{
+    @include animateEntrance(0.7s,0.5s);
+    margin: 22px 0 52px;
+    @include heading1(100, 64px, 75px, $white);
+    @include responsive($md){
+      @include heading1(100, 40px, 75px, $white);
+    }
+  }
+  /*"music theme for drupal"*/
+  h2{
+    @include animateEntrance(0.7s,0.7s);
+    margin: 0;
+    @include mainFont(300, 24px, 28px, $white);
+    border-bottom: 1px solid $white;
+    padding: 0 0 32px;
+    @include responsive($md){
+      @include heading1(100, 20px, 28px, $white);
+    }
+  }
+  /*button*/
+  a{
+    @include animateEntrance(0.7s,0.9s);
+    z-index: 100;
+    display: block;
+    @include primaryButton();
+  }
+}

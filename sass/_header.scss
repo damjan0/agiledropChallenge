@@ -1,0 +1,38 @@
+/*header*/
+.region-header{
+  position: fixed;
+  z-index: 999;
+  top:0;
+  left:0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px $paddingLR;
+  @include responsive($md){
+    flex-direction: column;
+  }
+  .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:42px;
+    a{
+      @include menuFont();
+    }
+  }
+}
+
+
+/*header children*/
+#block-adchallenge-branding{
+  display: flex;
+  align-items: center;
+  gap:31px;
+  @include heading1(100, 24px, 28px, $white);
+  font-size: 24px;
+  line-height: 28px;
+  /*missing "strong" for first part*/
+}
+

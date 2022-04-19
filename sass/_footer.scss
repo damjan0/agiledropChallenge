@@ -1,0 +1,39 @@
+footer{
+  /*set up footer*/
+  background-color: $footerGray;
+  #block-footer{
+    padding: 23px 0 26px;
+    }
+    /*footer menu*/
+  .menu{
+    margin:0;
+    display: flex;
+    justify-content: center;
+    gap: 26px;
+
+    .menu-item > a{
+      @include buttonFont(400, 14px, 16px, $mediumGray);
+      text-transform: capitalize;
+      &:hover{
+        text-decoration: underline;
+        color: $white;
+      }
+    }
+  }
+
+  }
+
+/*created by agilcon*/
+#block-footercreated{
+  background-color: $darkBlue;
+  padding: 19px 0px 17px;
+  p{
+    @include buttonFont(400, 12px, 14px, $lightGray);
+    text-align: center;
+    margin:0;
+    a{
+      @include buttonFont(400, 12px, 14px, $lightGray);
+      text-decoration: underline;
+    }
+  }
+}

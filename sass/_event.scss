@@ -1,0 +1,41 @@
+
+/*set up the section*/
+#challenge-event{
+  padding: 123px $paddingLR;
+  background-color: $darkBlue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include responsive($md){
+    flex-direction: column;
+  }
+}
+
+/*left part - img*/
+.img-left{
+  width: 30%;
+  align-items: center;
+  @include responsive($md){
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*right pard - img*/
+.content-right{
+  @include responsive($md){
+    width: 100%;
+  }
+  width: 60%;
+  h2{
+    margin: 0 0px 82px;
+    @include heading2();
+  }
+  p{
+    @include textFont();
+  }
+}

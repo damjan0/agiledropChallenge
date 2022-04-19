@@ -1,0 +1,17 @@
+@import "resources/variables";
+@import "resources/colors";
+@import "resources/buttons";
+@import "resources/fonts";
+@import "resources/responsivne";
+@import "resources/animations";
+
+@import "./header";
+@import "./home";
+@import "./news";
+@import "./event";
+@import "./about";
+@import "./footer";
+
+html{
+  scroll-behavior: smooth;
+}

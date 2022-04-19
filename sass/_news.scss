@@ -1,0 +1,63 @@
+
+/*set up the section*/
+#block-adchallenge-content{
+  padding: 123px $paddingLR;
+  background-color: $black;
+  > h2{
+    margin:0;
+    @include heading2();
+    margin-bottom: 60px;
+  }
+}
+
+/*articles*/
+.view-content{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap:0px;
+  @include responsive($md){
+    flex-direction: column;
+  }
+  .views-row{
+    width: 30%;
+    /*image*/
+    @include responsive($md){
+      width: 100%;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  article{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /*news title*/
+    h2 > a {
+      @include buttonFont(500, 24px, 28px, $white);
+    }
+  }
+}
+
+/*date created*/
+.createdDate{
+  @include mainFont(400, 12px, 14px, $mediumGray);
+  padding-bottom: 24px;
+}
+
+/*text*/
+.node__content{
+  p{
+    @include textFont();
+  }
+}
+
+/*read more*/
+.node-readmore{
+  padding: 0 !important;
+  @include readMoreButton();
+}
+
+

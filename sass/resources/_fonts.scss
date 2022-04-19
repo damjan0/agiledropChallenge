@@ -1,0 +1,59 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+/*set font using values*/
+@mixin mainFont($weight, $size, $height, $color){
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+/*set font using values + hide link decoration*/
+@mixin buttonFont($weight, $size, $height, $color){
+  @include mainFont($weight, $size, $height, $color);
+  text-decoration: none;
+}
+/*Normal text*/
+@mixin textFont{
+  @include mainFont(400, 14px, 30px, $lightGray);
+}
+/*heading 1 - name and logo*/
+@mixin heading1($weight, $size, $height, $color){
+  @include mainFont($weight, $size, $height, $color);
+  strong{
+    font-weight: 500;
+  }
+}
+/* header menu font*/
+@mixin menuFont{
+  @include buttonFont(500, 14px, 16px, $white);
+  text-transform: uppercase;
+
+  &:active, &:hover{
+    border-bottom: 3px solid $blue;
+    padding: 0 0 7px;
+  }
+}
+.active{ //for javascript to add when on scroll
+  border-bottom: 3px solid $blue;
+    padding: 0 0 7px;
+}
+
+/* heading2 font - section names*/
+@mixin heading2 {
+  @include mainFont(300, 36px, 42px, $white);
+  @include responsive($md){
+    @include mainFont(300, 24px, 42px, $white);
+  }
+  text-transform: uppercase;
+  &::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    padding: 0 0 60px;  /*60px: 24 for padding and 36 for font size*/
+    width: 100px;
+    border-bottom: 3px solid $blue;
+  }
+}

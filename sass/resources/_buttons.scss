@@ -1,0 +1,38 @@
+/*main red button from the home section*/
+@mixin primaryButton {
+  background-color: $red;
+  border-radius: 5px;
+  padding: 17px 51px;
+  @include responsive($md){
+    padding: 15px 30px;
+  }
+  border: 1px solid $red;
+  @include buttonFont(500, 14px, 16px, $white);
+  text-transform: uppercase;
+  &:hover{
+    border: 1px solid $white;
+    background-color: transparent;
+  }
+}
+
+/*read more button from the news section*/
+@mixin readMoreButton {
+  a{
+    @include buttonFont(500, 14px, 16px, $white);
+    > .visually-hidden{
+        border: solid $blue;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transform: rotate(-45deg);
+        position: relative !important;
+
+    }
+    &:hover{
+      > .visually-hidden{
+        border: solid $red;
+        border-width: 0 3px 3px 0;
+       }
+    }
+  }
+}
